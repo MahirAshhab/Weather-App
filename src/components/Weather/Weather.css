@@ -1,48 +1,48 @@
 .container{
-    margin-top: 14em;
-  }
+  margin-top: 14em;
+}
   
-  .location-box, .weather-box{
-    color: #fff;
-  }
+.location-box, .weather-box{
+  color: #fff;
+}
   
-  .location h1{
-    text-shadow: 3px 3px 3px black;
-  }
+.location h1{
+  text-shadow: 3px 3px 3px black;
+}
   
-  .date{
-    margin-top: 1em;
-    text-shadow: 2px 2px 2px black;
-  }
+.date{
+  margin-top: 1em;
+  text-shadow: 2px 2px 2px black;
+}
   
-  .date p{
-    font-size: 1.25em;
-    font-weight: 300;
-  }
+.date p{
+  font-size: 1.25em;
+  font-weight: 300;
+}
   
-  .weather-box{
-    margin-top: 1em;
-  }
+.weather-box{
+  margin-top: 1em;
+}
   
-  .weather-icon img{
-    width: 10em;
-    filter: drop-shadow(3px 3px 3px black);
-  }
+.weather-icon img{
+  width: 10em;
+  filter: drop-shadow(3px 3px 3px black);
+}
   
-  .temp{
-    margin-top: 1em;
-  }
+.temp{
+  margin-top: 1em;
+}
   
-  .weather{
-    margin-top: 1em;
-    text-shadow: 2px 2px 2px black;
-  }
+.weather{
+  margin-top: 1em;
+  text-shadow: 2px 2px 2px black;
+}
   
-  .temp h1{
-    text-shadow: 3px 3px 3px black;
-  }
+.temp h1{
+  text-shadow: 3px 3px 3px black;
+}
   
-  .weather p{
-    font-size: 1.25em;
-    font-weight: 300;
-  }
+.weather p{
+  font-size: 1.25em;
+  font-weight: 300;
+}
