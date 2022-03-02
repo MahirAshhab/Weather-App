@@ -54,8 +54,8 @@ const Weather = (props) => {
     }
 
     return (
-        <div className="container">
-            <div className="location-box">
+        <div className="container absolute top-1/2 left-1/2 mt-6">
+            <div className="location-box text-white">
                 <div className="location">
                     <h1>
                         {(typeof weather.main != "undefined") ? (weather.name) : ('')}
@@ -63,25 +63,27 @@ const Weather = (props) => {
                         {(typeof weather.main != "undefined") ? (weather.sys.country) : ('')}
                     </h1>
                 </div>
-                <div className="date">
-                    <p>
+                <div className="date mt-4">
+                    <p className="text-xl font-light">
                         {dateBuilder(new Date())}
                     </p>
                 </div>
             </div>
 
-            <div className="weather-box">
-                <div className="weather-icon">
-                    <img src={(typeof weather.main != "undefined") ? (imageLoader()) : ('')} alt="" />
+            <div className="weather-box text-white mt-4">
+                <div className="weather-icon flex justify-center">
+                    <img className="w-40"
+                        src={(typeof weather.main != "undefined") ? (imageLoader()) : ('')} alt=""
+                    />
                 </div>
-                <div className="temp">
+                <div className="temp mt-4">
                     <h1>
                         {(typeof weather.main != "undefined") ? (weather.main.temp) : ('')}
                         <span>° C</span>
                     </h1>
                 </div>
-                <div className="weather">
-                    <p>
+                <div className="weather mt-4">
+                    <p className="text-xl font-light">
                         {(typeof weather.main != "undefined") ? (weather.weather[weather.weather.length - 1].main) : ('')}
                     </p>
                 </div>

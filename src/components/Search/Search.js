@@ -32,10 +32,16 @@ const Search = () => {
 
     return (
         <div>
-            <div className="search-box">
+            <div className="search-box w-full">
                 <input
                     type="text"
-                    className="search-bar"
+                    className="search-bar 
+                    block 
+                    w-full 
+                    p-4 
+                    appearance-none border-0 bg-none
+                    rounded-bl-2xl rounded-tr-2xl
+                    text-xl"
                     placeholder="Search"
                     onChange={e => setQuery(e.target.value)}
                     value={query}
