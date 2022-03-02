@@ -5,7 +5,7 @@
 <p align="left">
   Netlify: 
     <a href="weather-app-77.netlify.app" target="blank">
-        weather-app-77.netlify.app
+        Weather App
     </a>
 </p>
 
