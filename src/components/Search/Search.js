@@ -2,6 +2,48 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Weather from '../Weather/Weather';
 
+const StyledDiv = styled.div`
+    .search-box .search-bar{
+        outline: none;
+        background-color: rgba(0, 0, 0, 0.35);
+        color: #28313b;
+        transition: 0.5s ease-in-out;
+    }
+        
+    input::placeholder {
+        color: white;
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+    }
+        
+    input:-ms-input-placeholder {
+        color: white;
+        transition: 0.5s ease-in-out;
+    }
+        
+    input::-ms-input-placeholder {
+        color: white;
+        transition: 0.5s ease-in-out;
+    }
+        
+    input:focus::placeholder {
+        color: grey;
+        opacity: 1;
+    }
+        
+    input:focus:-ms-input-placeholder {
+        color: grey;
+    }
+        
+    input:focus::-ms-input-placeholder {
+        color: grey;
+    }
+        
+    .search-box .search-bar:focus{
+        background-color: rgba(255, 255, 255);
+    }
+    `;
+
 const Search = () => {
 
     const api = {
@@ -30,48 +72,6 @@ const Search = () => {
         }
     }
 
-    const StyledDiv = styled.div`
-        .search-box .search-bar{
-            outline: none;
-            background-color: rgba(0, 0, 0, 0.35);
-            color: #28313b;
-            transition: 0.5s ease-in-out;
-        }
-        
-        input::placeholder {
-            color: white;
-            opacity: 1; /* Firefox */
-            transition: 0.5s ease-in-out;
-        }
-        
-        input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: white;
-            transition: 0.5s ease-in-out;
-        }
-        
-        input::-ms-input-placeholder { /* Microsoft Edge */
-            color: white;
-            transition: 0.5s ease-in-out;
-        }
-        
-        input:focus::placeholder {
-            color: grey;
-            opacity: 1; /* Firefox */
-        }
-        
-        input:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: grey;
-        }
-        
-        input:focus::-ms-input-placeholder { /* Microsoft Edge */
-            color: grey;
-        }
-        
-        .search-box .search-bar:focus{
-            background-color: rgba(255, 255, 255);
-        }
-    `;
-
     return (
         <StyledDiv>
             <div className="search-box w-full">
@@ -80,10 +80,12 @@ const Search = () => {
                     className="search-bar 
                     block 
                     w-full 
-                    p-4 
+                    p-3
+                    md:p-4
                     appearance-none border-0 bg-none
                     rounded-bl-2xl rounded-tr-2xl
-                    text-xl"
+                    text-sm font-light tracking-widest
+                    md:text-xl"
                     placeholder="Search"
                     onChange={e => setQuery(e.target.value)}
                     value={query}

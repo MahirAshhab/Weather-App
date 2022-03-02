@@ -7,6 +7,32 @@ import wind from '../../assets/windy.png';
 import snow from '../../assets/snowy.png';
 import styled from 'styled-components';
 
+const StyledDiv = styled.div`
+    .container{
+        transform: translate(-50%, -50%);
+    }
+        
+    .location h1{
+        text-shadow: 2px 2px 2px black;
+    }
+        
+    .date{
+        text-shadow: 2px 2px 2px black;
+    }
+    
+    .weather-icon img{
+        filter: drop-shadow(2px 2px 2px black);
+    }
+        
+    .weather{
+        text-shadow: 2px 2px 2px black;
+    }
+        
+    .temp h1{
+        text-shadow: 2px 2px 2px black;
+    }
+`;
+
 const Weather = (props) => {
 
     const { weather } = props;
@@ -53,35 +79,9 @@ const Weather = (props) => {
         }
     }
 
-    const StyledDiv = styled.div`
-        .container{
-            transform: translate(-50%, -50%);
-        }
-        
-        .location h1{
-            text-shadow: 3px 3px 3px black;
-        }
-        
-        .date{
-            text-shadow: 2px 2px 2px black;
-        }
-        
-        .weather-icon img{
-            filter: drop-shadow(3px 3px 3px black);
-        }
-        
-        .weather{
-            text-shadow: 2px 2px 2px black;
-        }
-        
-        .temp h1{
-            text-shadow: 3px 3px 3px black;
-        }
-    `;
-
     return (
         <StyledDiv>
-            <div className="container absolute top-1/2 left-1/2 mt-6">
+            <div className="container absolute top-1/2 left-1/2">
                 <div className="location-box text-white">
                     <div className="location">
                         <h1>
@@ -91,7 +91,7 @@ const Weather = (props) => {
                         </h1>
                     </div>
                     <div className="date mt-4">
-                        <p className="text-xl font-light">
+                        <p className="text-base md:text-xl font-light">
                             {dateBuilder(new Date())}
                         </p>
                     </div>
@@ -99,7 +99,7 @@ const Weather = (props) => {
 
                 <div className="weather-box text-white mt-4">
                     <div className="weather-icon flex justify-center">
-                        <img className="w-40"
+                        <img className="w-32 md:w-40"
                             src={(typeof weather.main != "undefined") ? (imageLoader()) : ('')} alt=""
                         />
                     </div>
@@ -110,7 +110,7 @@ const Weather = (props) => {
                         </h1>
                     </div>
                     <div className="weather mt-4">
-                        <p className="text-xl font-light">
+                        <p className="text-base md:text-xl font-light">
                             {(typeof weather.main != "undefined") ? (weather.weather[weather.weather.length - 1].main) : ('')}
                         </p>
                     </div>
