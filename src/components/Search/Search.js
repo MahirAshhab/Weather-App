@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import Weather from '../Weather/Weather';
-import './Seacrh.css';
 
 const Search = () => {
 
@@ -30,8 +30,50 @@ const Search = () => {
         }
     }
 
+    const StyledDiv = styled.div`
+        .search-box .search-bar{
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.35);
+            color: #28313b;
+            transition: 0.5s ease-in-out;
+        }
+        
+        input::placeholder {
+            color: white;
+            opacity: 1; /* Firefox */
+            transition: 0.5s ease-in-out;
+        }
+        
+        input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: white;
+            transition: 0.5s ease-in-out;
+        }
+        
+        input::-ms-input-placeholder { /* Microsoft Edge */
+            color: white;
+            transition: 0.5s ease-in-out;
+        }
+        
+        input:focus::placeholder {
+            color: grey;
+            opacity: 1; /* Firefox */
+        }
+        
+        input:focus:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: grey;
+        }
+        
+        input:focus::-ms-input-placeholder { /* Microsoft Edge */
+            color: grey;
+        }
+        
+        .search-box .search-bar:focus{
+            background-color: rgba(255, 255, 255);
+        }
+    `;
+
     return (
-        <div>
+        <StyledDiv>
             <div className="search-box w-full">
                 <input
                     type="text"
@@ -49,7 +91,7 @@ const Search = () => {
                 />
             </div>
             <Weather weather={weather}></Weather>
-        </div>
+        </StyledDiv>
     );
 };
 
