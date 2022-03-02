@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import Weather from '../Weather/Weather';
 import './Seacrh.css';
 
 const Search = () => {
@@ -11,6 +11,7 @@ const Search = () => {
                     placeholder="Search"
                 />
             </div>
+            <Weather></Weather>
         </div>
     );
 };
