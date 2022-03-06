@@ -4,7 +4,7 @@
 <h3 align="left">Demo:</h3>
 <p align="left">
   Netlify: 
-    <a href="weather-app-77.netlify.app" target="blank">
+    <a href="https://weather-app-77.netlify.app/" target="blank">
         Weather App
     </a>
 </p>
